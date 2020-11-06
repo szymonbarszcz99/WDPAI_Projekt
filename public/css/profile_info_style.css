@@ -1,0 +1,180 @@
+body{
+    background-color: #f7f0e3;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23939393' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    margin:0;
+}
+.logo_buttons{
+    margin:0;
+    display:grid;
+    grid-template-columns: 15em auto  24em;
+}
+.logo_buttons button{
+    background-color:black;
+    border-radius: 14px;
+    padding: 0.5em;
+    color: white;
+    border:none;
+    font: normal normal bold 1.7em Georgia;
+    letter-spacing: 0px;
+    outline: none;
+}
+.title{
+    text-align: left;
+    font: normal normal bold 3em Georgia;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    background-color: black;
+    border-radius: 0 0 14px 0;
+    grid-column: 1/2;
+    padding:0.2em;
+    margin:0;
+}
+.search_button{
+    grid-column: 3/4;
+    justify-self: center;
+    align-self: center;
+}
+.container{
+    width: 70vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10em 10em 10em 10em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3em;
+    justify-items: center;
+    align-items: center;
+    background-color: #F7F0E3;
+    border-radius: 14px;
+    border: 7px solid black;
+}
+.type1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.type2{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.type3{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.type4{
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+.user_data1{
+    grid-column: 2/3;
+    grid-row:1/2;
+}
+.user_data2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.user_data3{
+    grid-row:3/4;
+    grid-column:2/3;
+}
+.user_data4{
+    grid-row:4/5;
+    grid-column: 2/3;
+}
+.type1, .type2, .type3, .type4,.user_data1,.user_data2,.user_data3,.user_data4{
+    font: normal normal bold 40px/90px Georgia;
+    letter-spacing: 0px;
+    color: #000000;
+    margin:0;
+}
+.user_data1,.user_data2,.user_data3,.user_data4{
+    background: white;
+    width: 100%;
+    border-radius: 14px;
+    text-align-last: center;
+}
+.reviews{
+    width:70vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F7F0E3;
+    border-radius: 14px;
+    border: 7px solid black;
+    margin-top:3em;
+    display: flex;
+    flex-direction: column;
+    padding:0.5em;
+}
+.reviews h1{
+    font: normal normal bold 50px/90px Georgia;
+    letter-spacing: 0px;
+    color: #000000;
+}
+.reviews .date{
+    font: normal normal bold 35px/40px Georgia;
+    letter-spacing: 0px;
+    color: #707070;
+    margin:0;
+}
+.reviews .rate .material-icons{
+    font-size:2.5em;
+}
+.reviews article{
+    font: normal normal bold 25px/40px Georgia;
+}
+.buttons{
+    margin:2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0.5em;
+}
+.edit_button,.delete_button{
+    font: normal normal bold 40px Georgia;
+    background:white;
+    border-radius: 14px;
+    color:black;
+    margin-left: 2em;
+    border:none;
+    padding:0.3em;
+}
+hr{
+    height: 7px;
+    background: black;
+    width:100% 
+}
+@media only screen and (max-device-width: 420px){
+    .logo_buttons{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 1.5fr;
+    }
+    .logo_buttons button{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        justify-self:center;
+        align-self: center;
+        font-size:40px;
+    }
+    .title{
+        justify-self: start;
+        padding:0.3em;
+        font-size: 4.2em;
+    }
+    .container{
+        width:90vw;
+        justify-items: start;
+    }
+    .type1, .type2, .type3, .type4,.user_data1,.user_data2,.user_data3,.user_data4{
+        font-size: 35px;
+    }
+    .reviews{
+        width:90vw;
+    }
+    .reviews article{
+        font-size: 25px;
+    }
+    .reviews button{
+        font-size:50px;
+    }
+}
