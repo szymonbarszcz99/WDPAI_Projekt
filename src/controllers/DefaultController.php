@@ -13,4 +13,10 @@ class DefaultController extends AppController {
     {
         $this->render('search_result');
     }
+    public function login(){
+        $this->render('login');
+    }
+    public function register(){
+        $this->render('sign_up');
+    }
 }
