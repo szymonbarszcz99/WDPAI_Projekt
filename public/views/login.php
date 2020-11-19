@@ -9,10 +9,19 @@
             <h1>Book<br>Dynasty</h1>
         </div>
         <div class="login_container">
-            <form>
+            <form method="POST">
                 <input name="email" type="email" placeholder="email">
                 <input name="password" type="password" placeholder="password">
-                <button>LOGIN</button>
+                <div class="messages" action="login">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
+                <button type="submit">LOGIN</button>
             </form>
         </div>
     </div>

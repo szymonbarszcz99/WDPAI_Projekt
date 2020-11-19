@@ -28,16 +28,19 @@ form{
     justify-content: center;
     align-items: center; 
 }
+form .messages{
+    font:normal normal bold 20px Georgia;
+    color:white;
+    margin-top: 1em;
+}
 button{
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0 0 no-repeat padding-box;
     border-radius: 14px;
     border: none;
-    margin:1.5em;
-    margin-bottom: 1em;
-    box-shadow: 0;
-    line-height: 2.5em;
+    margin:1em;
+    box-shadow: none;
     font: normal normal bold 40px/40px Georgia;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #000000;
     padding:0.5em;
 }
