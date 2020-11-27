@@ -9,5 +9,6 @@ Router::get('','DefaultController');
 Router::get('result','DefaultController');
 Router::post('login','SecurityController');
 Router::get('register','DefaultController');
-
+Router::get('bookstore','DefaultController');
+Router::post('EditBookstore','EditController');
 Router::run($path);

@@ -64,7 +64,7 @@ button{
     grid-column: 1/2;
 }
 .container .info h1{
-    font: normal normal bold 70px Georgia;
+    font: normal normal bold 50px Georgia;
     margin:0 0 0.1em 0;
 }
 .container .info .rate .material-icons{
