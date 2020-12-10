@@ -10,9 +10,9 @@
             <h1>Book<br>Dynasty</h1>
         </div>
         <div class="search_container">
-            <form>
+            <form method="post" action="pass_argument">
                 <input name="search" type="text" placeholder="City">
-                <button>Search</button>
+                <button type="submit">Search</button>
             </form>
         </div>
     </div>
