@@ -11,7 +11,7 @@ class BookstoreRepository extends Repository
 
         $stmt->execute(array("%".$city."%"));
 
-        $bookstores = $stmt->fetch(PDO::FETCH_ASSOC);
+        $bookstores = $stmt->fetchAll();
         if($bookstores==false){
             return null;
         }
