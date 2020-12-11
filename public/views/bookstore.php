@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/bookstore_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/bookstore_style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>BOOKSTORE</title>
 </head>
@@ -21,7 +21,7 @@
     </div>
     <div class="container">
         <div class="info">
-            <h1>Bookstore</h1>
+            <? echo "<h1>$info[name]</h1>"?>
             <div class="rate">
                 <i class="material-icons" style="display:inline">star_border</i>
                 <i class="material-icons" style="display:inline">star_border</i>

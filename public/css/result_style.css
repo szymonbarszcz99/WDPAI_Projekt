@@ -79,6 +79,13 @@ button{
     font: normal normal bold 52px/59px Georgia;
     margin: 0;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
 .res_1 .rate{
     grid-column: 2/3;
     grid-row: 2/3;

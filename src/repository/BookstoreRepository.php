@@ -19,4 +19,13 @@ class BookstoreRepository extends Repository
             return $bookstores;
         }
     }
+    public function getAllData($id){
+        $stmt = $this->database->connect()->prepare("
+            SELECT * FROM public.bookstores LEFT JOIN public.opening_hours on bookstores.opening_hours_id=opening_hours.id WHERE bookstores.id=:id
+        ");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $array = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $array;
+    }
 }

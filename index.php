@@ -10,6 +10,6 @@ Router::post('pass_argument','SearchController');
 Router::get('result','DefaultController');
 Router::post('login','SecurityController');
 Router::get('register','DefaultController');
-Router::get('bookstore','DefaultController');
+Router::get('BookstoreInfo','DisplayInfoController');
 Router::post('EditBookstore','EditController');
 Router::run($path);
