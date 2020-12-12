@@ -21,12 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="834c132f-10bb-483d-a791-5775fb334ad5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/result_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/result_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bookstore_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bookstore_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/views/bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/bookstore.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/views/search_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/search_result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/routing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bookstore.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,8 @@
       <workItem from="1607612427479" duration="820000" />
       <workItem from="1607666550244" duration="3208000" />
       <workItem from="1607670988512" duration="3739000" />
-      <workItem from="1607697606362" duration="4207000" />
+      <workItem from="1607697606362" duration="4410000" />
+      <workItem from="1607763151319" duration="6191000" />
     </task>
     <servers />
   </component>

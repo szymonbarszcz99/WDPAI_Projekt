@@ -8,6 +8,7 @@ class SearchController extends AppController
     private $result=[];
     function pass_argument(){
        $city=$_POST['search'];
+       $url = strtok($_SERVER['REQUEST_URI'], '/');
        $bookstoreRepository=new BookstoreRepository();
        $this->result=$bookstoreRepository->getByCity($city);
        return $this->render('search_result',['result'=>$this->result]);

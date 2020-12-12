@@ -3,23 +3,25 @@
 
 class Bookstore
 {
+    private $id;
     private $name;
     private $address;
     private $telephone;
     private $site;
-    private $opening_hours=[];
+    private $opening_hours_id;
     private $description;
-    private $pictures=[];
+    private $photos;
 
-    public function __construct($name,$address,$telephone,$site,array $opening_hours,$description,array $pictures)
+    public function __construct($id,$name,$address,$telephone,$site,$opening_hours_id,$description,$photos)
     {
+        $this->id=$id;
         $this->name=$name;
         $this->address=$address;
         $this->telephone=$telephone;
         $this->site=$site;
-        $this->opening_hours=$opening_hours;
+        $this->opening_hours_id=$opening_hours_id;
         $this->description=$description;
-        $this->pictures=$pictures;
+        $this->photos=$photos;
     }
 
     public function getName()
