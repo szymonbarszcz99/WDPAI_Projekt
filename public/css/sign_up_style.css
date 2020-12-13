@@ -31,6 +31,11 @@ form{
     justify-content: center;
     align-items: center; 
 }
+.messages{
+    color:white;
+    text-align: center;
+    font: normal normal bold 20px Georgia;
+}
 button{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border-radius: 14px;

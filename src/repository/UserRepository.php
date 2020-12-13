@@ -25,4 +25,19 @@ class UserRepository extends Repository
             $user['surname']
         );
     }
+    public function addUser(User $user)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users (name, surname, email , password)
+            VALUES (?, ?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $user->getName(),
+            $user->getSurname(),
+            $user->getEmail(),
+            $user->getPassword()
+        ]);
+
+    }
 }

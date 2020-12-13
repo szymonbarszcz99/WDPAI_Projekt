@@ -17,7 +17,7 @@ class DefaultController extends AppController {
         $this->render('login');
     }
     public function register(){
-        $this->render('sign_up');
+        $this->render('register');
     }
     public function bookstore()
     {

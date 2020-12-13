@@ -9,7 +9,7 @@
             <h1>Book<br>Dynasty</h1>
         </div>
         <div class="login_container">
-            <form method="POST">
+            <form method="POST" action="login">
                 <input name="email" type="email" placeholder="email">
                 <input name="password" type="password" placeholder="password">
                 <div class="messages" action="login">
