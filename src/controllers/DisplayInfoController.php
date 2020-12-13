@@ -8,10 +8,7 @@ class DisplayInfoController extends AppController
     private $info;
     public function BookstoreInfo(){
         $bookstoreRepository=new BookstoreRepository();
-        $path = trim($_SERVER['REQUEST_URI'],'/');
-        $path = parse_url($path, PHP_URL_QUERY);
-        $id=$path;
-        $id=explode('=',$id)[1];
+        $id=$_POST['id'];
         $this->info=$bookstoreRepository->getAllData(intval($id));
         return $this->render('bookstore',['info'=>$this->info]);
     }

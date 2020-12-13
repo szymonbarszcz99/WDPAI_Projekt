@@ -24,7 +24,9 @@
                 echo "<div class=\"res_1\">";
                 $picture_name=explode(",", $one_result['photos'])[0];
                 echo "<img src=\"/public/img/uploads/$picture_name \">";
-                echo "<a href=\"BookstoreInfo?id=$one_result[id]\"><h1>$one_result[name]</h1></a>";
+                echo "<form action=\"BookstoreInfo\" method=\"POST\">
+                        <button value=\"$one_result[id]\" name=\"id\"><h1>$one_result[name]</h1></button>
+                      </form>";
                 echo "<div class=\"rate\">";
                 for ($i = 0; $i < 5; $i++) {
                     if ($i < $one_result['rate']) {
