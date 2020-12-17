@@ -18,37 +18,37 @@
         </form>
     </div>
     <div class="result">
-        <?php
-        if($result!=null) {
-            foreach ($result as $one_result) {
-                echo "<div class=\"res_1\">";
-                $picture_name=explode(",", $one_result['photos'])[0];
-                echo "<img src=\"/public/img/uploads/$picture_name \">";
-                echo "<form action=\"BookstoreInfo\" method=\"POST\">
-                        <button value=\"$one_result[id]\" name=\"id\"><h1>$one_result[name]</h1></button>
-                      </form>";
-                echo "<div class=\"rate\">";
-                for ($i = 0; $i < 5; $i++) {
-                    if ($i < $one_result['rate']) {
-                        echo "<i class=\"material-icons\" style=\"display:inline\">star_rate</i>";
-                    } else {
-                        echo "<i class=\"material-icons\" style=\"display:inline\">star_border</i>";
-                    }
-                };
-                echo "</div>";
-                echo "<p>$one_result[address]<p>";
-                echo "<article>";
-                echo "$one_result[description]";
-                echo "</article>";
-                echo "<hr>";
-                echo "</div>";
-            };
-            echo "</div>";
-        }
-        else {
-            echo "<h1>No bookstores found</h1>";
-        }
-        ?>
+        <?php if($bookstores!=null): ?>
+            <?php foreach ($bookstores as $one_result): ?>
+                <div class="res_1">
+
+                    <img src="/public/uploads/<?= explode(",", $one_result->getPhotos())[0];?>">
+                    <form action="BookstoreInfo" method="POST">
+                        <button value="<?= $one_result->getId(); ?>" name="id"><h1><?= $one_result->getName(); ?></h1></button>
+                    </form>
+                    <div class="rate">
+                    <?php for ($i = 0; $i < 5; $i++): ?>
+                        <?php if ($i < $one_result->getRate()): ?>
+                            <i class="material-icons" style="display:inline">star_rate</i>
+                        <?php else: ?>
+                            <i class="material-icons" style="display:inline">star_border</i>
+                        <?php endif; ?>
+                    <?php endfor ?>
+                    </div>
+                    <p><?= $one_result->getAddress(); ?><p>
+                    <article>
+                            <?= $one_result->getDescription(); ?>
+                    </article>
+                <hr>
+                </div>
+
+
+            <?php endforeach; ?>
+
+        <?php else: ?>
+            <h1>No bookstores found</h1>
+
+        <?php endif; ?>
 
     </div>
 </body>

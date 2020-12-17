@@ -20,8 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="834c132f-10bb-483d-a791-5775fb334ad5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/uploads/Penguin Monarchs Spines.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Penguin Monarchs family tree.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/de revo2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/de revo3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/de_revo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gkn1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gkn2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pan tadeusz1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/pan tadeusz2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/openingHours.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/repository/OpeningHoursRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WDPAI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WDPAI.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/bookstore_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/bookstore_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/index_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/result_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/result_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/bookstore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/search_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/search_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bookstore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,5 +120,23 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="72" y="27" key="#PHP" timestamp="1608195202515">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="72" y="27" key="#PHP/72.27.1848.1053@72.27.1848.1053" timestamp="1608195202515" />
+    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser" timestamp="1608195203951">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1608195203951" />
+    <state x="642" y="171" width="742" height="771" key="NewPhpClassDialog" timestamp="1608195395926">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="642" y="171" width="742" height="771" key="NewPhpClassDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1608195395926" />
+    <state x="634" y="434" width="713" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608186429422">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="634" y="434" width="713" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1608186429422" />
   </component>
 </project>

@@ -5,23 +5,29 @@ class Bookstore
 {
     private $id;
     private $name;
+    private $rate;
     private $address;
     private $telephone;
-    private $site;
+    private $webpage;
     private $opening_hours_id;
     private $description;
     private $photos;
 
-    public function __construct($id,$name,$address,$telephone,$site,$opening_hours_id,$description,$photos)
+    public function __construct($id,$name,$rate,$address,$telephone,$webpage,$opening_hours_id,$description,$photos)
     {
         $this->id=$id;
         $this->name=$name;
+        $this->rate=$rate;
         $this->address=$address;
         $this->telephone=$telephone;
-        $this->site=$site;
+        $this->webpage=$webpage;
         $this->opening_hours_id=$opening_hours_id;
         $this->description=$description;
         $this->photos=$photos;
+    }
+
+    public function getId(){
+        return $this->id;
     }
 
     public function getName()
@@ -32,6 +38,14 @@ class Bookstore
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    public function getRate(){
+        return $this->rate;
+    }
+
+    public function setRate($rate){
+        $this->rate=$rate;
     }
 
     public function getAddress()
@@ -54,14 +68,14 @@ class Bookstore
         $this->telephone = $telephone;
     }
 
-    public function getSite()
+    public function getWebpage()
     {
-        return $this->site;
+        return $this->webpage;
     }
 
-    public function setSite($site)
+    public function setWebpage($webpage)
     {
-        $this->site = $site;
+        $this->site = $webpage;
     }
 
     public function getOpeningHours(): array
@@ -84,14 +98,14 @@ class Bookstore
         $this->description = $description;
     }
 
-    public function getPictures(): array
+    public function getPhotos()
     {
-        return $this->pictures;
+        return $this->photos;
     }
 
-    public function setPictures(array $pictures)
+    public function setPhotos($photos)
     {
-        $this->pictures = $pictures;
+        $this->photos = $photos;
     }
 
 }

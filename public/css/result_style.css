@@ -149,11 +149,14 @@ a:hover{
     }
     .res_1 img{
         width:100%;
-        padding-top: 56.25%;
+        object-fit: cover;
+        max-height: none;
+    }
+    .res_1 button{
+        margin:0.5em 0;
     }
     .res_1 h1{
         font-size: 70px;
-        margin-top: 0.2em;
     }
     .res_1 .rate .material-icons{
         font-size: 50px;

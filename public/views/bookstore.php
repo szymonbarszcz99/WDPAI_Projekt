@@ -20,62 +20,61 @@
         </form>
     </div>
     <div class="container">
-        <?
-        echo "<div class=\"info\">";
-            echo "<h1>$info[name]</h1>";
-            echo "<div class=\"rate\">";
-                for ($i = 0; $i < 5; $i++) {
-                    if ($i < $info['rate']) {
-                        echo "<i class=\"material-icons\" style=\"display:inline\">star_rate</i>";
-                    } else {
-                        echo "<i class=\"material-icons\" style=\"display:inline\">star_border</i>";
-                    }
-                };
-            echo "</div>";
-            echo "<div class=\"display-grid\">";
-                echo "<i class=\"material-icons\" style=\"display:inline\">location_city</i><p>$info[address]</p>";
-                echo "<i class=\"material-icons\" style=\"display:inline\">call</i><p>$info[telephone]</p>";
-                echo "<i class=\"material-icons\" style=\"display:inline\">computer</i><p>$info[webpage]</p>";
-                echo "<i class=\"material-icons\" style=\"display:inline\">schedule</i>";
-            echo "</div>";
-            echo "<table>";
-                echo "<tr>";
-                    echo "<td>Monday</td>";
-                    echo "<td>$info[mon]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Tuesday</td>";
-                    echo "<td>$info[tue]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Wednsday</td>";
-                    echo "<td>$info[wed]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Thursday</td>";
-                    echo "<td>$info[thur]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Friday</td>";
-                    echo "<td>$info[fri]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Saturday</td>";
-                    echo "<td>$info[sat]</td>";
-                echo "</tr>";
-                echo "<tr>";
-                    echo "<td>Sunday</td>";
-                    echo "<td>$info[sun]</td>";
-                echo "</tr>";
-            echo "</table>";
-        echo "</div>";
-        echo "<div class=\"picture_text\">";
-            $picture_name=explode(",", $info['photos'])[0];
-            echo "<img src=\"/public/img/uploads/$picture_name \" alt=\"Image\">";
-            echo "<p>$info[description]</p>";
-        echo "</div>";
-    echo "</div>";
-    ?>
+
+        <div class="info">
+            <h1><?= $bookstore->getName(); ?></h1>
+            <div class="rate">
+                <?php for ($i = 0; $i < 5; $i++): ?>
+                    <?php if ($i < $bookstore->getRate()): ?>
+                        <i class="material-icons" style="display:inline">star_rate</i>
+                    <?php else: ?>
+                        <i class="material-icons" style="display:inline">star_border</i>
+                    <?php endif ?>
+                <?php endfor ?>
+            </div>
+            <div class="display-grid">
+                <i class="material-icons" style="display:inline">location_city</i><p><?= $bookstore->getAddress() ?></p>
+                <i class="material-icons" style="display:inline">call</i><p><?= $bookstore->getTelephone() ?></p>
+                <i class="material-icons" style="display:inline">computer</i><p><?= $bookstore->getWebpage() ?></p>
+                <i class="material-icons" style="display:inline">schedule</i>
+            </div>
+            <table>
+                <tr>
+                    <td>Monday</td>
+                    <td><?= $opening_hours->getMon(); ?></td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td><?= $opening_hours->getTue(); ?></td>
+                </tr>
+                <tr>
+                    <td>Wednsday</td>
+                    <td><?= $opening_hours->getWed(); ?></td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td><?= $opening_hours->getThur(); ?></td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td><?= $opening_hours->getFri(); ?></td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td><?= $opening_hours->getSat(); ?></td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td><?= $opening_hours->getSun(); ?></td>
+                </tr>
+            </table>
+        </div>
+        <div class="picture_text">
+            <img src="/public/uploads/<?= explode(",", $bookstore->getPhotos())[0]; ?>" alt="Image">
+            <p><?= $bookstore->getDescription(); ?></p>
+        </div>
+    </div>
+
     <div class="reviews">
         <h1>Reviews</h1>
         <div class="review">

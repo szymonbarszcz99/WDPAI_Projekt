@@ -73,6 +73,7 @@ input{
 @media only screen and (max-device-width: 420px){
     body{
         grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 0.2fr 1fr 0.2fr;
     }
     .container{
         grid-row:2/3;
