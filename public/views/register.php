@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/sign_up_style.css">
+    <script type="text/javascript" src="./public/js/ValidateRegistration.js" defer></script>
     <title>SIGN UP</title>
 </head>
 <body>

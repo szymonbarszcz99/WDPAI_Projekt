@@ -31,6 +31,11 @@ form{
     justify-content: center;
     align-items: center; 
 }
+.no-valid {
+    border: 3px solid red;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
 .messages{
     color:white;
     text-align: center;
