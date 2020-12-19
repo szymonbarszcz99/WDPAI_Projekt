@@ -23,7 +23,7 @@
                 <div class="res_1">
 
                     <img src="/public/uploads/<?= explode(",", $one_result->getPhotos())[0];?>">
-                    <form action="BookstoreInfo" method="POST">
+                    <form action="BookstoreInfo?id=<? $one_result->getId(); ?>" method="GET">
                         <button value="<?= $one_result->getId(); ?>" name="id"><h1><?= $one_result->getName(); ?></h1></button>
                     </form>
                     <div class="rate">

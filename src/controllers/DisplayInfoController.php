@@ -11,9 +11,9 @@ class DisplayInfoController extends AppController
     public function BookstoreInfo(){
         $bookstoreRepository=new BookstoreRepository();
         $openingHoursRepository = new OpeningHoursRepository();
-        $id=$_POST['id'];
+        $id=$_GET['id'];
         $this->bookstore=$bookstoreRepository->getAllData(intval($id));
-        $this->opening_hours=$openingHoursRepository->getById($this->bookstore->getId());
+        $this->opening_hours=$openingHoursRepository->getById(intval($this->bookstore->getOpeningHours()));
         return $this->render('bookstore',[
             'bookstore'=>$this->bookstore,
             'opening_hours'=>$this->opening_hours

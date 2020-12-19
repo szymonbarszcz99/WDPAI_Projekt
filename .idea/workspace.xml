@@ -21,8 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="834c132f-10bb-483d-a791-5775fb334ad5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/sign_up_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/sign_up_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/bookstore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/bookstore_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/bookstore_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/search_result.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/search_result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DisplayInfoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/EditController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/EditController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bookstore.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bookstore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/openingHours.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/openingHours.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/BookstoreRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/OpeningHoursRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/OpeningHoursRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +67,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +92,8 @@
       <workItem from="1607763151319" duration="6879000" />
       <workItem from="1607860200532" duration="4601000" />
       <workItem from="1607872274703" duration="1026000" />
-      <workItem from="1608273371636" duration="2014000" />
+      <workItem from="1608273371636" duration="5883000" />
+      <workItem from="1608381657705" duration="11049000" />
     </task>
     <servers />
   </component>
@@ -108,14 +117,39 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="72" y="27" key="#PHP/72.27.1848.1053@72.27.1848.1053" timestamp="1608195202515" />
-    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser" timestamp="1608195203951">
+    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser" timestamp="1608381950724">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1608195203951" />
+    <state x="710" y="138" width="653" height="837" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053@72.27.1848.1053" timestamp="1608381950724" />
+    <state width="1238" height="271" key="GridCell.Tab.0.bottom" timestamp="1608395601482">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1608395601482" />
+    <state width="1238" height="271" key="GridCell.Tab.0.center" timestamp="1608395601482">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1608395601482" />
+    <state width="1238" height="271" key="GridCell.Tab.0.left" timestamp="1608395601482">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1608395601482" />
+    <state width="1238" height="271" key="GridCell.Tab.0.right" timestamp="1608395601482">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1238" height="271" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1608395601482" />
     <state x="642" y="171" width="742" height="771" key="NewPhpClassDialog" timestamp="1608195395926">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="642" y="171" width="742" height="771" key="NewPhpClassDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1608195395926" />
+    <state x="1607" y="27" width="1350" height="1053" key="SettingsEditor" timestamp="1608383241456">
+      <screen x="0" y="27" width="3280" height="1053" />
+    </state>
+    <state x="1607" y="27" key="SettingsEditor/0.27.3280.1053@0.27.3280.1053" timestamp="1608383241456" />
+    <state x="247" y="27" width="1350" height="1053" key="SettingsEditor/72.27.3208.1053@72.27.3208.1053" timestamp="1608383128310" />
+    <state x="894" y="447" width="204" height="219" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1608393064279">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="894" y="447" width="204" height="219" key="com.intellij.database.run.ParametersPanel.Standalone/72.27.1848.1053@72.27.1848.1053" timestamp="1608393064279" />
     <state x="634" y="434" width="713" height="245" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608186429422">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

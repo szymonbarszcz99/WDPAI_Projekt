@@ -3,6 +3,7 @@
 
 class openingHours
 {
+    private $id;
     private $mon;
     private $tue;
     private $wed;
@@ -11,18 +12,18 @@ class openingHours
     private $sut;
     private $sun;
 
-    /**
-     * openingHours constructor.
-     * @param $mon
-     * @param $tue
-     * @param $wed
-     * @param $thur
-     * @param $fri
-     * @param $sat
-     * @param $sun
-     */
-    public function __construct($mon, $tue, $wed, $thur, $fri, $sat, $sun)
+    public function getId()
     {
+        return $this->id;
+    }
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+    public function __construct($id,$mon, $tue, $wed, $thur, $fri, $sat, $sun)
+    {
+        $this->id=$id;
         $this->mon = $mon;
         $this->tue = $tue;
         $this->wed = $wed;

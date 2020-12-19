@@ -73,6 +73,7 @@
             <img src="/public/uploads/<?= explode(",", $bookstore->getPhotos())[0]; ?>" alt="Image">
             <p><?= $bookstore->getDescription(); ?></p>
         </div>
+        <a href="EditBookstore?id=<?= $bookstore->getId(); ?>">Edit</a>
     </div>
 
     <div class="reviews">

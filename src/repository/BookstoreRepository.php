@@ -43,7 +43,7 @@ class BookstoreRepository extends Repository
         $stmt->execute();
         $array = $stmt->fetch(PDO::FETCH_ASSOC);
         $bookstore = new Bookstore(
-            $array['id'],
+            $id,
             $array['name'],
             $array['rate'],
             $array['address'],
@@ -55,5 +55,20 @@ class BookstoreRepository extends Repository
         );
 
         return $bookstore;
+    }
+    public function updateById($bookstore){
+        $stmt = $this->database->connect()->prepare("
+            UPDATE public.bookstores SET name=?,address=?,telephone=?,webpage=?,description=?,photos=? WHERE id=?
+        ");
+
+        $stmt->execute([
+            $bookstore->getName(),
+            $bookstore->getAddress(),
+            $bookstore->getTelephone(),
+            $bookstore->getWebpage(),
+            $bookstore->getDescription(),
+            $bookstore->getPhotos(),
+            $bookstore->getId()
+        ]);
     }
 }

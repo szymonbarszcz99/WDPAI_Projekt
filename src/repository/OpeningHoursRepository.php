@@ -12,6 +12,7 @@ class OpeningHoursRepository extends Repository
         $stmt->execute();
         $array = $stmt->fetch(PDO::FETCH_ASSOC);
         $openingHours = new openingHours(
+            $id,
             $array['mon'],
             $array['tue'],
             $array['wed'],
@@ -21,5 +22,21 @@ class OpeningHoursRepository extends Repository
             $array['sun']
         );
         return $openingHours;
+    }
+    public function insertById($id,$openingHours){
+        $stmt = $this->database->connect()->prepare("
+            UPDATE public.opening_hours SET mon=?,tue=?,wed=?,thur=?,fri=?,sat=?,sun=? WHERE opening_hours.id=?
+        ");
+
+        $stmt->execute([
+            $openingHours->getMon(),
+            $openingHours->getTue(),
+            $openingHours->getWed(),
+            $openingHours->getThur(),
+            $openingHours->getFri(),
+            $openingHours->getSat(),
+            $openingHours->getSun(),
+            intval($id)
+        ]);
     }
 }

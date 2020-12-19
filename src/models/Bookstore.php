@@ -78,14 +78,14 @@ class Bookstore
         $this->site = $webpage;
     }
 
-    public function getOpeningHours(): array
+    public function getOpeningHours()
     {
-        return $this->opening_hours;
+        return $this->opening_hours_id;
     }
 
-    public function setOpeningHours(array $opening_hours)
+    public function setOpeningHours($opening_hours)
     {
-        $this->opening_hours = $opening_hours;
+        $this->opening_hours_id = $opening_hours;
     }
 
     public function getDescription()
