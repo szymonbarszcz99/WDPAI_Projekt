@@ -39,7 +39,15 @@ class SecurityController extends AppController
         }
 
         $url = "http://$_SERVER[HTTP_HOST]";
+        setcookie("id",$userRepository->getId($email),time()+60*60*24);
+        setcookie("name",$user->getName(),time()+60*60*24);
         header("Location: {$url}/");
+    }
+    public function logout(){
+        setcookie("id","", time() - 3600);
+        setcookie("name","", time() - 3600);
+        header("Location: {$url}/");
+
     }
     public function register()
     {
@@ -67,5 +75,8 @@ class SecurityController extends AppController
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
-
+    public function profileInfo(){
+        $user=$this->userRepository->getById($_COOKIE['id']);
+        $this->render('profile_info',['user'=>$user]);
+    }
 }

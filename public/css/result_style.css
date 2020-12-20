@@ -9,10 +9,10 @@ body{
     margin:0;
     display:grid;
     grid-template-columns: 15em auto 12em 12em;
+    align-items: center;
 }
-.logo_buttons button{
-    justify-self: start;
-    align-self: center;
+.login_button,.sign_up_button{
+    margin: auto;
 }
 button{
     background-color:black;

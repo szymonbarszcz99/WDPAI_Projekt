@@ -9,8 +9,13 @@
         <div class=title>
             Book<br>Dynasty
         </div>
-        <button class=login_button>Log in <i class="material-icons" style="font-size: 1em;">person</i></button>
-        <button class=sign_up_button>Sign up <i class="material-icons" style="font-size: 1em;">person_add</i></button>
+        <?php if(!isset($_COOKIE['name']) or !isset($_COOKIE['id'])):?>
+            <a href="login" class="login_button"><button >Log in <i class="material-icons" style="font-size: 1em;">person</i></button></a>
+            <a href="register" class="sign_up_button"><button>Sign up <i class="material-icons" style="font-size: 1em;">person_add</i></button></a>
+        <?php else: ?>
+            <a href="profileInfo" class="login_button"><button><?= $_COOKIE['name']; ?> <i class="material-icons" style="font-size: 1em;">person</i></button></a>
+            <a href="logout" class="sign_up_button"><button>Log out <i class="material-icons" style="font-size: 1em;">exit_to_app</i></button></a>
+        <?php endif; ?>
     </div>
     <div class="searchbar">
         <form method="POST" action="pass_argument">

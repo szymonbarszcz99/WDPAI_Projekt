@@ -13,4 +13,6 @@ Router::get('register','DefaultController');
 Router::get('BookstoreInfo','DisplayInfoController');
 Router::post('EditBookstore','EditController');
 Router::post('register','SecurityController');
+Router::get('logout','SecurityController');
+Router::get('profileInfo','SecurityController');
 Router::run($path);

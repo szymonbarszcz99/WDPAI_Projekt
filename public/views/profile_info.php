@@ -12,18 +12,14 @@
         <div class=title>
             Book<br>Dynasty
         </div>
-        <button class="search_button">Search City <i class="material-icons" style="font-size: 1em;">place</i></button>
+        <a href="/" class="search_button"><button >Search City <i class="material-icons" style="font-size: 1em;">place</i></button></a>
     </div>
     <div class="container">
         <p class="type1">Name and surname</p>
         <p class="type2">Email</p>
-        <p class="type3">Country of origin</p>
-        <p class="type4">Date of birth</p>
 
-        <p class="user_data1" id="user">Name and surname</p>
-        <p class="user_data2">Email</p>
-        <p class="user_data3">Country of origin</p>
-        <p class="user_data4">Date of Birth</p>
+        <p class="user_data1" id="user"><?= $user->getName().' '.$user->getSurname(); ?></p>
+        <p class="user_data2"><?= $user->getEmail(); ?></p>
 
     </div>
     <div class="reviews">

@@ -39,7 +39,7 @@ body{
     height: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10em 10em 10em 10em;
+    grid-template-rows: 10em 10em;
     margin-right: auto;
     margin-left: auto;
     margin-top: 3em;
@@ -89,7 +89,8 @@ body{
 }
 .user_data1,.user_data2,.user_data3,.user_data4{
     background: white;
-    width: 100%;
+    width: auto;
+    padding: 0 0.5em;
     border-radius: 14px;
     text-align-last: center;
 }

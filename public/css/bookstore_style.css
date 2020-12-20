@@ -41,6 +41,9 @@ button{
 .sign_up_button{
     grid-column: 4/5;
 }
+.login_button,.sign_up_button{
+    margin: auto;
+}
 .searchbar{
     margin: 2em;
 }
