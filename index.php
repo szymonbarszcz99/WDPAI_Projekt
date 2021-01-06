@@ -15,4 +15,5 @@ Router::post('EditBookstore','EditController');
 Router::post('register','SecurityController');
 Router::get('logout','SecurityController');
 Router::get('profileInfo','SecurityController');
+Router::post('search','SearchController');
 Router::run($path);

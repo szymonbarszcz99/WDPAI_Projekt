@@ -71,4 +71,15 @@ class BookstoreRepository extends Repository
             $bookstore->getId()
         ]);
     }
+    public function getByCityFetchApi(string $searchString){
+        $searchString = '%' . strtolower($searchString) . '%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM bookstores WHERE LOWER(address) LIKE :search OR LOWER(name) LIKE :search
+        ');
+        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

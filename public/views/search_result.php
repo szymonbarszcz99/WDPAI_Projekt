@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/result_style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>RESULTS</title>
 </head>
 <body>
@@ -18,9 +19,7 @@
         <?php endif; ?>
     </div>
     <div class="searchbar">
-        <form method="POST" action="pass_argument">
-            <input placeholder="Search city" name="search">
-        </form>
+            <input placeholder="Search_city" name="search">
     </div>
     <div class="result">
         <?php if($bookstores!=null): ?>
@@ -57,3 +56,21 @@
 
     </div>
 </body>
+
+<template id="template">
+    <div class="res_1">
+
+        <img src="">
+        <form action="" method="GET">
+            <button name="id"><h1>name</h1></button>
+        </form>
+        <div class="rate">
+
+        </div>
+        <p>address<p>
+            <article>
+                description
+            </article>
+        <hr>
+    </div>
+</template>
