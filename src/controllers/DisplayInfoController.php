@@ -24,4 +24,17 @@ class DisplayInfoController extends AppController
             'canEdit'=>$this->canEdit
         ]);
     }
+    public function rate(){
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if ($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            $bookstoreRepository=new BookstoreRepository();
+            http_response_code(200);
+            echo json_encode($bookstoreRepository->updateRate(intval($decoded['bookstoreid']),intval($decoded['rate'])));
+        }
+    }
 }

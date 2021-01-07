@@ -131,11 +131,15 @@ table{
     text-align: center;
     font: normal normal bold 50px Georgia;
     margin-top:0;
+    margin-bottom: 0;
 }
 .reviews hr{
     height: 5px;
     background: #707070;
     width:100% 
+}
+.reviews .rate{
+    text-align: center;
 }
 .reviews .date {
     font: normal normal bold 18px Georgia;
@@ -148,8 +152,8 @@ table{
     font: normal normal bold 20px Georgia;
     margin: 0;
 }
-.reviews .rate .material-icons{
-    font-size:35px;
+.reviews .material-icons{
+    font-size:60px;
 }
 .reviews article{
     font: normal normal bold 16px/20px Georgia;

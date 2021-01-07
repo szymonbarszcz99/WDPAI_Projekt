@@ -1,4 +1,4 @@
-const search = document.querySelector('input[placeholder="Search_city"]');
+const search = document.querySelector('input[placeholder="Search"]');
 const bookstoreContainer = document.querySelector(".result");
 
 search.addEventListener("keyup", function (event) {

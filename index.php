@@ -16,4 +16,5 @@ Router::post('register','SecurityController');
 Router::get('logout','SecurityController');
 Router::get('profileInfo','SecurityController');
 Router::post('search','SearchController');
+Router::post('rate','DisplayInfoController');
 Router::run($path);

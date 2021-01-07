@@ -19,7 +19,7 @@
         <?php endif; ?>
     </div>
     <div class="searchbar">
-            <input placeholder="Search_city" name="search">
+            <input placeholder="Search" name="search">
     </div>
     <div class="result">
         <?php if($bookstores!=null): ?>

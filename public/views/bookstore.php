@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/public/css/bookstore_style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="./public/js/rate.js" defer></script>
     <title>BOOKSTORE</title>
 </head>
 
@@ -28,7 +29,7 @@
 
         <div class="info">
             <h1><?= $bookstore->getName(); ?></h1>
-            <div class="rate">
+            <div class="rate_info">
                 <?php for ($i = 0; $i < 5; $i++): ?>
                     <?php if ($i < $bookstore->getRate()): ?>
                         <i class="material-icons" style="display:inline">star_rate</i>
@@ -86,16 +87,16 @@
     <div class="reviews">
         <h1>Reviews</h1>
         <div class="review">
+            <?php if(isset($_COOKIE['name']) or isset($_COOKIE['id'])):?>
+            <div class="<?= $bookstore->getId();?>">
+                <div class="rate_user">
+                    <i id="1" class="material-icons" style="display:inline">star_border</i><i id="2" class="material-icons" style="display:inline">star_border</i><i id="3" class="material-icons" style="display:inline">star_border</i><i id="4" class="material-icons" style="display:inline">star_border</i><i id="5" class="material-icons" style="display:inline">star_border</i>
+                </div>
+            </div>
+            <?php endif;?>
             <hr>
             <p class="name">Name and Surname</p>
             <p class="date">DD.MM.YYYY</p>
-            <div class="rate">
-                <i class="material-icons" style="display:inline">star_border</i>
-                <i class="material-icons" style="display:inline">star_border</i>
-                <i class="material-icons" style="display:inline">star_border</i>
-                <i class="material-icons" style="display:inline">star_border</i>
-                <i class="material-icons" style="display:inline">star_border</i>
-            </div>
             <article>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
