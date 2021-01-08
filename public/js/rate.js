@@ -77,7 +77,7 @@ function giveRate(event){
     }).then(function (response) {
         return response.json();
     }).then(function (newRate) {
-        loadNewRate(newRate)
+        loadNewRate(newRate);
     });
 };
 
@@ -87,7 +87,7 @@ function loadNewRate(newRate){
         newI=document.createElement("i");
         newI.className="material-icons";
         newI.style.display="inline";
-        if(i<Math.round(newRate.rate)){
+        if(i<Math.round(newRate.rate*5)){
             newI.innerText="star_rate";
         }
         else{

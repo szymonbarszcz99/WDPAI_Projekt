@@ -5,6 +5,8 @@ require_once __DIR__.'/../repository/BookstoreRepository.php';
 require_once __DIR__ .'/../models/openingHours.php';
 require_once __DIR__ . '/../repository/OpeningHoursRepository.php';
 require_once __DIR__ . '/../repository/OwnerRepository.php';
+require_once __DIR__ . '/../repository/RatesRepository.php';
+
 class DisplayInfoController extends AppController
 {
     private $bookstore;
@@ -30,11 +32,20 @@ class DisplayInfoController extends AppController
         if ($contentType === "application/json") {
             $content = trim(file_get_contents("php://input"));
             $decoded = json_decode($content, true);
-
             header('Content-type: application/json');
+
+            $id=intval($decoded["bookstoreid"]);
+            $stars=intval($decoded["rate"]);
+
+            $ratesRepository = new RatesRepository();
+            $ratesRepository->updataRates($id,$stars);
+            $rating=$ratesRepository->getRates($id);
+
             $bookstoreRepository=new BookstoreRepository();
+            $bookstoreRepository->updateRate(intval($id),intval($stars),intval($rating["sumofrates"]),intval($rating["numberofrates"]));
+            $response=$bookstoreRepository->getRateById(intval($id));
             http_response_code(200);
-            echo json_encode($bookstoreRepository->updateRate(intval($decoded['bookstoreid']),intval($decoded['rate'])));
+            echo json_encode($response);
         }
     }
 }

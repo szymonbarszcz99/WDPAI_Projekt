@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Repository.php';
-require_once 'RatesRepository.php';
 require_once __DIR__.'/../models/Bookstore.php';
 require_once __DIR__.'/../models/openingHours.php';
 
@@ -83,25 +82,23 @@ class BookstoreRepository extends Repository
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function updateRate($id, $stars){
+    public function updateRate($id, $stars,$sumOfRates,$numberOfRates){
 
-        $ratesRepository = new RatesRepository();
-        $ratesRepository->updataNumberOfRates($id);
-        $numberOfRates=$ratesRepository->getNumberOfRates($id);
-
+        $rate=($sumOfRates)/($numberOfRates*5.0);
         $stmt = $this->database->connect()->prepare('
-            UPDATE bookstores SET rate = (rate + :stars)/(:numberOfRates) WHERE bookstores.id = :id
+            UPDATE bookstores SET rate = :rate WHERE bookstores.id = :id
          ');
-        $stmt->bindParam(':stars',$stars,PDO::PARAM_INT);
-        $stmt->bindParam(':numberOfRates', $numberOfRates, PDO::PARAM_INT);
+        $stmt->bindParam(':rate', $rate, PDO::PARAM_STR);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
-
+    }
+    public function getRateById($id){
         $stmt = $this->database->connect()->prepare('
             SELECT rate FROM bookstores WHERE id=:id
-         ');
+        ');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
