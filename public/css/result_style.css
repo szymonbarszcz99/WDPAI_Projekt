@@ -41,6 +41,12 @@ button{
 .sign_up_button{
     grid-column: 4/5;
 }
+.material-icons.my{
+    font-size: 1em;
+}
+.material-icons.rate{
+    display: inline;
+}
 .searchbar{
     margin: 2em;
 }

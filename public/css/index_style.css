@@ -69,7 +69,10 @@ input{
     color: white;
     margin:1em 1em 0 0;
 }
-
+.material-icons.my{
+    font-size: 1em;
+    display: inline;
+}
 @media only screen and (max-device-width: 420px){
     body{
         grid-template-rows: 1fr 1fr 1fr;
@@ -92,5 +95,8 @@ input{
     }
     button{
         font-size: 60px;
+    }
+    .messages{
+        font-size: 2em;
     }
 }

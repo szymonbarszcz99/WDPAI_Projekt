@@ -44,6 +44,12 @@ button{
 .login_button,.sign_up_button{
     margin: auto;
 }
+.material-icons.my{
+    font-size: 1em;
+}
+.material-icons.info{
+    display: inline;
+}
 .searchbar{
     margin: 2em;
 }
@@ -138,7 +144,7 @@ table{
     background: #707070;
     width:100% 
 }
-.reviews .rate{
+.rate_user{
     text-align: center;
 }
 .reviews .date {

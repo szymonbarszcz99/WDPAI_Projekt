@@ -8,11 +8,12 @@ class BookstoreRepository extends Repository
 {
     public function getByCity(string $city){
         $bookstores = [];
+        $city = '%' . strtolower($city) . '%';
         $stmt = $this->database->connect()->prepare("
-            SELECT * FROM public.bookstores WHERE address like ?
+                        SELECT * FROM bookstores WHERE LOWER(address) LIKE :search OR LOWER(name) LIKE :search
         ");
-
-        $stmt->execute(array("%".$city."%"));
+        $stmt->bindParam(':search',$city,PDO::PARAM_STR);
+        $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if($result==false){

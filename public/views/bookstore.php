@@ -13,11 +13,11 @@
             Book<br>Dynasty
         </div>
         <?php if(!isset($_COOKIE['name']) or !isset($_COOKIE['id'])):?>
-            <a href="login" class="login_button"><button >Log in <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="register" class="sign_up_button"><button>Sign up <i class="material-icons" style="font-size: 1em;">person_add</i></button></a>
+            <a href="login" class="login_button"><button >Log in <i class="material-icons my">person</i></button></a>
+            <a href="register" class="sign_up_button"><button>Sign up <i class="material-icons my" >person_add</i></button></a>
         <?php else: ?>
-            <a href="profileInfo" class="login_button"><button><?= $_COOKIE['name']; ?> <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="logout" class="sign_up_button"><button>Log out <i class="material-icons" style="font-size: 1em;">exit_to_app</i></button></a>
+            <a href="profileInfo" class="login_button"><button><?= $_COOKIE['name']; ?> <i class="material-icons my" >person</i></button></a>
+            <a href="logout" class="sign_up_button"><button>Log out <i class="material-icons my" >exit_to_app</i></button></a>
         <?php endif; ?>
     </div>
     <div class="searchbar">
@@ -32,17 +32,17 @@
             <div class="rate_info">
                 <?php for ($i = 0; $i < 5; $i++): ?>
                     <?php if ($i < $bookstore->getRate()): ?>
-                        <i class="material-icons" style="display:inline">star_rate</i>
+                        <i class="material-icons info" >grade</i>
                     <?php else: ?>
-                        <i class="material-icons" style="display:inline">star_border</i>
+                        <i class="material-icons info" >star_border</i>
                     <?php endif ?>
                 <?php endfor ?>
             </div>
             <div class="display-grid">
-                <i class="material-icons" style="display:inline">location_city</i><p><?= $bookstore->getAddress() ?></p>
-                <i class="material-icons" style="display:inline">call</i><p><?= $bookstore->getTelephone() ?></p>
-                <i class="material-icons" style="display:inline">computer</i><p><?= $bookstore->getWebpage() ?></p>
-                <i class="material-icons" style="display:inline">schedule</i>
+                <i class="material-icons info" >location_city</i><p><?= $bookstore->getAddress() ?></p>
+                <i class="material-icons info" >call</i><p><?= $bookstore->getTelephone() ?></p>
+                <i class="material-icons info" >computer</i><p><?= $bookstore->getWebpage() ?></p>
+                <i class="material-icons info" >schedule</i>
             </div>
             <table>
                 <tr>
@@ -90,7 +90,7 @@
             <?php if(isset($_COOKIE['name']) or isset($_COOKIE['id'])):?>
             <div class="<?= $bookstore->getId();?>">
                 <div class="rate_user">
-                    <i id="1" class="material-icons" style="display:inline">star_border</i><i id="2" class="material-icons" style="display:inline">star_border</i><i id="3" class="material-icons" style="display:inline">star_border</i><i id="4" class="material-icons" style="display:inline">star_border</i><i id="5" class="material-icons" style="display:inline">star_border</i>
+                    <i id="1" class="material-icons info" >star_border</i><i id="2" class="material-icons" style="display:inline">star_border</i><i id="3" class="material-icons" style="display:inline">star_border</i><i id="4" class="material-icons" style="display:inline">star_border</i><i id="5" class="material-icons" style="display:inline">star_border</i>
                 </div>
             </div>
             <?php endif;?>

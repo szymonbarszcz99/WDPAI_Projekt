@@ -12,7 +12,7 @@
         <div class=title>
             Book<br>Dynasty
         </div>
-        <a href="/" class="search_button"><button >Search City <i class="material-icons" style="font-size: 1em;">place</i></button></a>
+        <a href="/" class="search_button"><button >Search City <i class="material-icons my" >place</i></button></a>
     </div>
     <div class="container">
         <p class="type1">Name and surname</p>
@@ -26,11 +26,11 @@
         <h1>Written reviews</h1>
         <p class="date">DD.MM.YYYY</p>
         <div class="rate">
-            <i class="material-icons" style="display:inline">star_border</i>
-            <i class="material-icons" style="display:inline">star_border</i>
-            <i class="material-icons" style="display:inline">star_border</i>
-            <i class="material-icons" style="display:inline">star_border</i>
-            <i class="material-icons" style="display:inline">star_border</i>
+            <i class="material-icons my" >star_border</i>
+            <i class="material-icons my" >star_border</i>
+            <i class="material-icons my" >star_border</i>
+            <i class="material-icons my" >star_border</i>
+            <i class="material-icons my" >star_border</i>
         </div>
         <article>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -40,8 +40,8 @@
             anim id est laborum.
         </article>
         <div class="buttons">
-            <button class=edit_button>Edit <i class="material-icons" style="font-size: 1em;">create</i></button>
-            <button class=delete_button>Delete <i class="material-icons" style="font-size: 1em;">delete</i></button>
+            <button class=edit_button>Edit <i class="material-icons my" >create</i></button>
+            <button class=delete_button>Delete <i class="material-icons my" >delete</i></button>
         </div>
         <hr>
         

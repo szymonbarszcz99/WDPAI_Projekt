@@ -11,11 +11,11 @@
             Book<br>Dynasty
         </div>
         <?php if(!isset($_COOKIE['name']) or !isset($_COOKIE['id'])):?>
-            <a href="login" class="login_button"><button >Log in <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="register" class="sign_up_button"><button>Sign up <i class="material-icons" style="font-size: 1em;">person_add</i></button></a>
+            <a href="login" class="login_button"><button >Log in <i class="material-icons my">person</i></button></a>
+            <a href="register" class="sign_up_button"><button>Sign up <i class="material-icons my" >person_add</i></button></a>
         <?php else: ?>
-            <a href="profileInfo" class="login_button"><button><?= $_COOKIE['name']; ?> <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="logout" class="sign_up_button"><button>Log out <i class="material-icons" style="font-size: 1em;">exit_to_app</i></button></a>
+            <a href="profileInfo" class="login_button"><button><?= $_COOKIE['name']; ?> <i class="material-icons my" >person</i></button></a>
+            <a href="logout" class="sign_up_button"><button>Log out <i class="material-icons my" >exit_to_app</i></button></a>
         <?php endif; ?>
     </div>
     <div class="searchbar">
@@ -33,9 +33,9 @@
                     <div class="rate">
                     <?php for ($i = 0; $i < 5; $i++): ?>
                         <?php if ($i < $one_result->getRate()): ?>
-                            <i class="material-icons" style="display:inline">star_rate</i>
+                            <i class="material-icons rate" >grade</i>
                         <?php else: ?>
-                            <i class="material-icons" style="display:inline">star_border</i>
+                            <i class="material-icons rate" >star_border</i>
                         <?php endif; ?>
                     <?php endfor ?>
                     </div>

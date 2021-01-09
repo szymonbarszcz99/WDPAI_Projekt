@@ -145,6 +145,10 @@ hr{
     background: black;
     width:100% 
 }
+.material-icons.my{
+    font-size: 1em;
+    display: inline;
+}
 @media only screen and (max-device-width: 420px){
     .logo_buttons{
         display: grid;

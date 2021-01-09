@@ -18,11 +18,11 @@
     </div>
     <div class="additional_buttons">
         <?php if(!isset($_COOKIE['name']) or !isset($_COOKIE['id'])):?>
-            <a href="login"><button class="login_button">Log in <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="register"><button class="sign_up_button">Sign up <i class="material-icons" style="font-size: 1em;">person_add</i></button></a>
+            <a href="login"><button class="login_button">Log in <i class="material-icons my" >person</i></button></a>
+            <a href="register"><button class="sign_up_button">Sign up <i class="material-icons my" >person_add</i></button></a>
         <?php else: ?>
-            <a href="profileInfo"><button class="login_button"><?= $_COOKIE['name']; ?> <i class="material-icons" style="font-size: 1em;">person</i></button></a>
-            <a href="logout"><button class="sign_up_button">Log out <i class="material-icons" style="font-size: 1em;">exit_to_app</i></button></a>
+            <a href="profileInfo"><button class="login_button"><?= $_COOKIE['name']; ?> <i class="material-icons my" >person</i></button></a>
+            <a href="logout"><button class="sign_up_button">Log out <i class="material-icons my" >exit_to_app</i></button></a>
         <?php endif; ?>
     </div>
 </body>
