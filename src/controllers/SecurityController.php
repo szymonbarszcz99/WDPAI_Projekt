@@ -2,6 +2,7 @@
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/SessionRepository.php';
 
 class SecurityController extends AppController
 {
@@ -41,11 +42,17 @@ class SecurityController extends AppController
         $url = "http://$_SERVER[HTTP_HOST]";
         setcookie("id",$userRepository->getId($email),time()+60*60*24);
         setcookie("name",$user->getName(),time()+60*60*24);
+        $sessionRepository=new SessionRepository();
+        $sessionRepository->login($userRepository->getId($email));
+
         header("Location: {$url}/");
     }
     public function logout(){
+        $sessionRepository=new SessionRepository();
+        $sessionRepository->logout($_COOKIE['id']);
         setcookie("id","", time() - 3600);
         setcookie("name","", time() - 3600);
+        $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/");
 
     }

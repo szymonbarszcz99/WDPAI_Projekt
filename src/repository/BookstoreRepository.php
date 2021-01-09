@@ -38,7 +38,12 @@ class BookstoreRepository extends Repository
     }
     public function getAllData($id){
         $stmt = $this->database->connect()->prepare("
-            SELECT * FROM full_info WHERE id=:id
+            SELECT
+                bookstores.id,bookstores.name,bookstores.address,bookstores.telephone,bookstores.webpage,bookstores.description,bookstores.photos,bookstores.rate,bookstores.opening_hours_id,
+                opening_hours.mon,opening_hours.tue,opening_hours.wed,opening_hours.thur,opening_hours.fri,opening_hours.sat,opening_hours.sun
+                FROM bookstores
+                LEFT JOIN opening_hours on opening_hours.id = bookstores.opening_hours_id
+                WHERE bookstores.id=:id;
         ");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
