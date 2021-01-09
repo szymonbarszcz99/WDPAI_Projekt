@@ -38,7 +38,7 @@ class BookstoreRepository extends Repository
     }
     public function getAllData($id){
         $stmt = $this->database->connect()->prepare("
-            SELECT * FROM public.bookstores LEFT JOIN public.opening_hours on bookstores.opening_hours_id=opening_hours.id WHERE bookstores.id=:id
+            SELECT * FROM full_info WHERE id=:id
         ");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -54,8 +54,17 @@ class BookstoreRepository extends Repository
             $array['description'],
             $array['photos']
         );
-
-        return $bookstore;
+        $opening_hours=new openingHours(
+            $bookstore->getId(),
+            $array['mon'],
+            $array['tue'],
+            $array['wed'],
+            $array['thur'],
+            $array['fri'],
+            $array['sat'],
+            $array['sun']
+        );
+        return array($bookstore,$opening_hours);
     }
     public function updateById($bookstore){
         $stmt = $this->database->connect()->prepare("
@@ -76,14 +85,14 @@ class BookstoreRepository extends Repository
         $searchString = '%' . strtolower($searchString) . '%';
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM bookstores WHERE LOWER(address) LIKE :search OR LOWER(name) LIKE :search
+            SELECT * FROM quick_info WHERE LOWER(address) LIKE :search OR LOWER(name) LIKE :search
         ');
         $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    public function updateRate($id, $stars,$sumOfRates,$numberOfRates){
+    public function updateRate($id,$sumOfRates,$numberOfRates){
 
         $rate=($sumOfRates)/($numberOfRates*5.0);
         $stmt = $this->database->connect()->prepare('
