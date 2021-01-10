@@ -23,7 +23,7 @@
                     </form>
                     <div class="rate">
                     <?php for ($i = 0; $i < 5; $i++): ?>
-                        <?php if ($i < $one_result->getRate()): ?>
+                        <?php if ($i < round($one_result->getRate()*5.0)): ?>
                             <i class="material-icons rate" >grade</i>
                         <?php else: ?>
                             <i class="material-icons rate" >star_border</i>

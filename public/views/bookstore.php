@@ -22,7 +22,7 @@
             <h1><?= $bookstore->getName(); ?></h1>
             <div class="rate_info">
                 <?php for ($i = 0; $i < 5; $i++): ?>
-                    <?php if ($i < $bookstore->getRate()): ?>
+                    <?php if ($i < round($bookstore->getRate()*5.0)): ?>
                         <i class="material-icons info" >grade</i>
                     <?php else: ?>
                         <i class="material-icons info" >star_border</i>
