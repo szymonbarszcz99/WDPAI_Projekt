@@ -83,6 +83,9 @@ class SecurityController extends AppController
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
     public function profileInfo(){
+        if(!isset($_COOKIE['id'])){
+            return $this->render('login');
+        }
         $user=$this->userRepository->getById($_COOKIE['id']);
         $this->render('profile_info',['user'=>$user]);
     }

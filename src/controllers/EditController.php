@@ -24,7 +24,7 @@ class EditController extends AppController
 
             if($this->validate($total)){
                 $bookstoreRepository=new BookstoreRepository();
-                $bookstore=$bookstoreRepository->getAllData($_POST['id']);
+                $bookstore=$bookstoreRepository->getAllData($_POST['id'])[0];
                 $opening_hours=new openingHours(
                     $bookstore->getOpeningHours(),
                     $_POST['mon_open_time'].'-'.$_POST['mon_close_time'],
